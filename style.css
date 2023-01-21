@@ -359,14 +359,21 @@ nav {
 }
 
 .new__img {
-    max-width: 500px;
-    max-height: 300px;
+    
+    width: 100%;
+    height: auto;
     margin-bottom: 25px;
     cursor: pointer;
     padding: 0 20px;
     transition: all 300ms ease;
     cursor: not-allowed;
+    border-radius: 12px;
+    
+
 }
+
+
+
 
 .new__img:hover {
     transform: scale(0.9);
@@ -460,7 +467,6 @@ footer {
 
 
 .footer__social--list {
-    display: list-item;
     margin-bottom: 20px;
 }
 
