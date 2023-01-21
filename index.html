@@ -49,12 +49,41 @@
                         ">Blog</a>
                     </li>
                 </ul>
+
+                <!--
+Un menu que se activara una vez la resolucion sea reducida
+-->
+
+                <button class="btn__menu closed" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu_list">
+                            <a href="#" class="menu__link" onclick="closeMenu()"> Inicio</a>
+                        </li>
+                        <li class="menu_list">
+                            <a href="#features" class="menu__link" onclick="closeMenu()"> Nosotros</a>
+                        </li>
+                        <li class="menu_list">
+                            <a href="menu__link no--cursor" class="menu__link" onclick="closeMenu()"> Proyectos</a>
+                        </li>
+                        <li class="menu_list">
+                            <a href="menu__link no--cursor" class="menu__link" onclick="closeMenu()"> Blog</a>
+                        </li>
+
+
+                    </ul>
+                </div>
             </nav>
         </div>
 
     </section>
     <section>
-        <div class=" row row__seo">
+        <div class="row__seo">
             <div class="header__wrapper">
                 <p class="header__para">
                     <span class="text__bold"> Lorem ipsum </span> dolor sit amet, consectetur adipiscing elit, sed do
@@ -116,6 +145,11 @@
         <h1 class="news__header">Noticias </h1><span class="line"></span>
     </div>
 
+
+
+    <!--
+Esta es la seccion de la api
+-->
     <section>
         <div class="row">
             <div class="news__wrapper">
@@ -124,15 +158,13 @@
                         <img src="./assets/download 1.png" class="new__img">
                         <span class="news__popper">More Details...</span>
                     </figure>
-                    
-                    
-                    <p class="new__para">Cuenta atrás en los océanos: el mundo vuelve a 
+
+
+                    <p class="new__para">Cuenta atrás en los océanos: el mundo vuelve a
                         debatir cómo protegerlos mientras el calor asfixia los mares.</p>
                 </div>
-                <div class="news__spinner">
-                    <i class="fas fa-spinner news__loading--spinner"></i>
-                  </div>
-                
+
+
             </div>
         </div>
     </section>
@@ -140,7 +172,7 @@
     <footer>
         <div class="footer__row">
 
-        
+
 
             <div class="footer_social--list-wrapper">
                 <div class="footer__social--list">
@@ -173,8 +205,8 @@
                 </span>
 
             </a>
-            <div class="footer__copyright"> 
-                
+            <div class="footer__copyright">
+
                 000-000-0000
                 <br>
                 C/ Respaldo Av. Independencia
@@ -182,14 +214,14 @@
                 <br>
                 <br>
                 <br>
-                
+
                 <span class="footer__p"> Politica de privacidad</span>
-                
+
                 <br>
                 <span class="footer__p"> Terminos y condiciones </span>
             </div>
-            
-            </div>
+
+        </div>
 
         </div>
 
@@ -197,6 +229,7 @@
 
 
     <script src="index.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@ async function main () {
 main()
 
 
-function newsHTML(newxsopt) {
+function newsHTML(newsopt) {
     return `<div class="new">
     <figure class="figure__wrapper">
         <img src=${newsopt.imageUrl} class="new__img">
