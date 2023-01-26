@@ -1,20 +1,30 @@
-const newsList = document.querySelector(".news__wrapper")
 
-async function main () {
-    const news = await fetch ("https://inshorts.deta.dev/news?category=all");
-    const newsData = await news.json();
-    newsList.innerHTML = newsData.data.slice(0,6).map((newsopt) => newsHTML(newsopt)).join("");
-}
+window.addEventListener('DOMContentLoaded', async () => {
 
-main()
-function newsHTML(newsopt) {
-    return `<div class="new">
-    <figure class="figure__wrapper">
-        <img src=${newsopt.imageUrl} class="new__img">
-        <span class="news__popper">More Details...</span>
-    </figure>
-    <p class="new__para">${newsopt.content.slice(0,90)}.</p>
-</div>
-`;
-}
+    const $postList = document.querySelector(".news__wrapper")
+
+    const getPots = async () => {
+        const res = await fetch ("https://inshorts.deta.dev/news?category=all");
+        return await res.json();
+    }
+
+    function insertNewPost(post) {
+        return `<div class="new">
+            <figure class="figure__wrapper">
+                <img src=${post.imageUrl} class="new__img">
+                <span class="news__popper">More Details...</span>
+            </figure>
+            <p class="new__para">${post.content.substring(0, 90)}.</p>
+        </div>
+        `;
+    }
+
+    try {
+        const posts = await getPots();
+        $postList.innerHTML = posts.data.slice(0,6)
+        .map((post) => insertNewPost(post))
+        .join("");
+    } catch (err) { }
+
+});
 
